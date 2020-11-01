@@ -40,7 +40,7 @@
                         <td> <label>Email :</label> </td>
                         <td><input type="text" name="email" #email="ngModel" [(ngModel)]="model.email" [pattern]="emailRegex" required [ngClass]="{'invalid-textbox' : signInForm.submitted && !email.valid}">
                             <div *ngIf="signInForm.submitted && email.errors?.pattern">
-                                <label class="validation-message">  Invalide Email Address !!</label>
+                                <label id="valid" class="validation-message">  Invalide Email Address !!</label>
                             </div>
                         </td>
                     </tr>
@@ -48,7 +48,7 @@
                         <td><label>Password :</label> </td>
                         <td><input type="password" name="password" #password="ngModel" [(ngModel)]="model.password" palceholder="password" required minlength="5" [ngClass]="{'invalid-textbox' : signInForm.submitted && !password.valid}"><br/>
                             <div *ngIf="signInForm.submitted && !password.valid">
-                                <label class="validation-message">Password must be greater then 5 characters</label></div>
+                                <label id="valid" class="validation-message">Password must be greater then 5 characters</label></div>
                         </td>
                     </tr>
                 </div>

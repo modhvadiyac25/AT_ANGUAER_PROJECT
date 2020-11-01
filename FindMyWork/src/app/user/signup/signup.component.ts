@@ -14,6 +14,8 @@ import {Router} from '@angular/router';
 export class SignupComponent implements OnInit {
   public successmsg:boolean;
   public serverErrormsg:string;
+  public cpassword='';
+  emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   constructor(public userservice:UserService,private router:Router) { }
 
